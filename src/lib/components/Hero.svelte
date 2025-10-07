@@ -1,0 +1,99 @@
+<script>
+	import Button from '$lib/ui/Button.svelte';
+	import { Phone, Mail, ShieldCheck, Building2, Bed, Heart, Utensils } from '@lucide/svelte';
+
+	const features = [
+		{
+			icon: ShieldCheck,
+			text: 'Legalnie funkcjonujący, zarejestrowany ośrodek opieki nad seniorem'
+		},
+		{
+			icon: Building2,
+			text: 'Nowy budynek wybudowany w 2025 roku'
+		},
+		{
+			icon: Bed,
+			text: '36 komfortowych, nowocześnie wyposażonych pokoi'
+		},
+		{
+			icon: Heart,
+			text: 'Profesjonalna opieka 24/7'
+		},
+		{
+			icon: Utensils,
+			text: 'Pyszne i pożywne posiłki przygotowywane we własnej kuchni'
+		}
+	];
+</script>
+
+<section
+	class="relative flex min-h-[600px] items-center justify-center overflow-hidden bg-background lg:min-h-[700px]"
+>
+	<div class="absolute inset-0">
+		<img
+			src="/images/hero-panorama.webp"
+			alt="Rezydencja Seniora Leśny Zakątek"
+			class="h-full object-fill md:w-full md:object-cover"
+		/>
+		<div
+			class="absolute bg-gradient-to-r from-transparent from-50% to-background/85 to-50% md:inset-0"
+		></div>
+	</div>
+
+	<div
+		class="relative z-10 container mx-4 mt-4 rounded-lg bg-foreground/60 px-4 py-4 shadow-md md:mx-auto md:mt-0 md:bg-transparent md:px-0 md:shadow-none"
+	>
+		<div class="flex items-center justify-end">
+			<div class="animate-fade-in max-w-xl space-y-8 text-left">
+				<h1 class="text-4xl leading-tight font-bold text-balance md:text-5xl lg:text-6xl">
+					<span class="text-white md:text-primary">Rezydencja Seniora</span>
+					<br />
+					<span class="text-accent">Leśny Zakątek</span>
+				</h1>
+
+				<p class="text-base text-white md:text-lg md:text-foreground/90">
+					Nowoczesny dom opieki w otoczeniu jezior i lasów. Profesjonalna opieka, komfort i
+					serdeczna atmosfera dla Twoich bliskich.
+				</p>
+
+				<div class="flex flex-wrap justify-center gap-6 pt-6 md:justify-start">
+					<Button size="lg" clazz="text-base px-6 py-5 hover:scale-105 transition-transform">
+						<Phone class="mr-2 h-5 w-5" />
+						Zadzwoń do nas
+					</Button>
+					<Button
+						size="lg"
+						variant="outline"
+						clazz="text-base px-6 py-5 hover:scale-105 transition-transform"
+					>
+						<Mail class="mr-2 h-5 w-5" />
+						Napisz do nas
+					</Button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="mx-auto max-w-7xl bg-stone-50 py-12">
+	<div class="container mx-auto px-4">
+		<div class="mx-auto max-w-7xl">
+			<div class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-5">
+				{#each features as { icon: Icon, text }}
+					<div
+						class="group flex flex-col items-center gap-3 rounded-lg bg-green-100/80 p-4 transition-all hover:bg-green-100"
+					>
+						<div
+							class="flex h-12 w-12 items-center justify-center rounded-full bg-green-200 transition-colors group-hover:bg-green-300"
+						>
+							<Icon class="h-6 w-6 text-green-800" />
+						</div>
+						<p class="text-center text-xs leading-snug font-medium text-foreground md:text-sm">
+							{text}
+						</p>
+					</div>
+				{/each}
+			</div>
+		</div>
+	</div>
+</section>

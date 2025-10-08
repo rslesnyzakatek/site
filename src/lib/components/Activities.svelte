@@ -7,7 +7,8 @@
 		Bike,
 		Trees,
 		HeartPulse,
-		Sparkles
+		Sparkles,
+		Heart
 	} from '@lucide/svelte';
 
 	import Card from '$lib/ui/Card.svelte';
@@ -52,7 +53,10 @@
 	];
 </script>
 
-<section id="activities" class="scroll-m-8 bg-gradient-to-b from-background to-stone-50 py-20">
+<section
+	id="activities"
+	class="scroll-m-8 bg-gradient-to-b from-warm-green-soft to-background py-20"
+>
 	<div class="container mx-auto px-4">
 		<div class="mx-auto mb-16 max-w-3xl text-center">
 			<h2 class="mb-6 text-4xl font-bold text-primary md:text-5xl">Aktywności i zajęcia</h2>
@@ -107,7 +111,7 @@
 			</div>
 		</div>
 
-		<div class="mx-auto mb-12 max-w-4xl">
+		<div class="mx-auto mb-12 max-w-6xl">
 			<Card clazz="border-green-200 bg-gradient-to-br from-green-50 to-green-100/50 p-8">
 				<div class="mb-6 flex items-start gap-4">
 					<div class="rounded-lg bg-green-200 p-3">
@@ -152,7 +156,9 @@
 		<div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
 			<div class="space-y-6">
 				{#each activities as { icon: Icon, title, description }}
-					<div class="rounded-lg bg-secondary/50 p-6 transition-colors hover:bg-secondary">
+					<div
+						class="border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+					>
 						<div class="flex items-start gap-4">
 							<div class="flex-shrink-0">
 								<div
@@ -186,6 +192,24 @@
 						alt="Seniorzy podczas terapii zajęciowej - gry i zabawy"
 						class="h-64 w-full object-cover"
 					/>
+				</div>
+			</div>
+		</div>
+		<div class="mx-auto mt-16 max-w-6xl rounded-2xl bg-primary p-8 text-primary-foreground md:p-12">
+			<div class="flex flex-col items-center gap-6 text-center md:flex-row md:text-left">
+				<div class="flex-shrink-0">
+					<div class="flex h-16 w-16 items-center justify-center rounded-full bg-accent/20">
+						<Heart class="h-8 w-8 text-accent" />
+					</div>
+				</div>
+				<div>
+					<h3 class="mb-3 text-2xl font-bold">Komfortowe pokoje dla odwiedzających</h3>
+					<p class="leading-relaxed text-primary-foreground/90">
+						Bliskość rodziny to najlepsze wsparcie, jakie można ofiarować seniorowi. W naszym
+						ośrodku zapewniamy możliwość noclegu dla odwiedzających — w wygodnych, przytulnych
+						pokojach gościnnych. Dzięki temu mogą Państwo spędzić z bliskimi tyle czasu, ile
+						potrzeba.
+					</p>
 				</div>
 			</div>
 		</div>

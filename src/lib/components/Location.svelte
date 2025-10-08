@@ -34,7 +34,8 @@
 		<div class="mx-auto mb-16 max-w-3xl text-center">
 			<h2 class="mb-6 text-4xl font-bold text-primary md:text-5xl">Idealna lokalizacja</h2>
 			<p class="text-lg text-muted-foreground">
-				Bliskość jezior i lasów w połączeniu z doskonałą dostępnością komunikacyjną. Idealne miejsce
+				Ośrodek znajduje się w bezpośrednim sąsiedztwie pięknego Jeziora Nowogardzkiego. <br />
+				Bliskość jezior i lasów w połączeniu z doskonałą dostępnością komunikacyjną. <br /> Idealne miejsce
 				na spacery i jazdę na rowerze.
 			</p>
 		</div>

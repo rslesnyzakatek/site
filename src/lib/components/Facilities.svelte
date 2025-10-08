@@ -34,24 +34,6 @@
 			image: '/images/senior-nature.webp'
 		}
 	];
-
-	const amenities = [
-		{
-			icon: Activity,
-			title: 'Rehabilitacja',
-			description: 'Profesjonalna fizjoterapia i terapia zajęciowo-aktywizacyjna'
-		},
-		{
-			icon: Home,
-			title: 'Pokój dzienny',
-			description: 'Przestrzenne pomieszczenia wspólne do spotkań i integracji'
-		},
-		{
-			icon: Accessibility,
-			title: 'Bez barier',
-			description: 'Parterowy budynek w pełni dostosowany do osób niepełnosprawnych'
-		}
-	];
 </script>
 
 <section id="facilities" class="mx-auto max-w-7xl scroll-m-8 bg-background py-20">
@@ -128,24 +110,6 @@
 					</div>
 				</div>
 			</div>
-		</div>
-
-		<div class="mx-auto mt-16 grid max-w-4xl gap-6 md:grid-cols-3">
-			{#each amenities as { icon: Icon, title, description }}
-				<div
-					class="rounded-lg bg-secondary/50 p-6 text-center transition-colors hover:bg-secondary"
-				>
-					<div
-						class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10"
-					>
-						<Icon class="h-8 w-8 text-primary" />
-					</div>
-					<h4 class="mb-2 text-lg font-semibold text-foreground">
-						{title}
-					</h4>
-					<p class="text-sm text-muted-foreground">{description}</p>
-				</div>
-			{/each}
 		</div>
 	</div>
 </section>

@@ -1,12 +1,15 @@
 <script>
 	import { Heart } from '@lucide/svelte';
+	import logo from '$lib/assets/logo-light.svg';
 </script>
 
 <footer class="bg-primary py-12 text-primary-foreground">
 	<div class="container mx-auto px-4">
 		<div class="mb-8 grid gap-8 md:grid-cols-3">
 			<div>
-				<h3 class="mb-4 text-2xl font-bold">Leśny Zakątek</h3>
+				<div class="h-14">
+					<img src={logo} alt="Leśny Zakątek" class="h-full w-auto" />
+				</div>
 				<p class="leading-relaxed text-primary-foreground/80">
 					Rezydencja Seniora w sercu przyrody. Profesjonalna opieka i ciepła atmosfera dla Twoich
 					bliskich.

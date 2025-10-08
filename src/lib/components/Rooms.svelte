@@ -1,12 +1,19 @@
 <script lang="ts">
-	import type { SwiperContainer } from 'swiper/element/bundle';
-	import { Bed, CheckCircle2, Home, Palmtree, ArrowLeft, ArrowRight } from '@lucide/svelte';
-	import { onMount } from 'svelte';
+	import Dialog from '$lib/ui/Dialog.svelte';
+	import { Bed, CheckCircle2, Home, Palmtree } from '@lucide/svelte';
 
-	const rooms = [
-		{ src: '/images/room-2person.webp', alt: 'Pokój 1' },
-		{ src: '/images/room-3person.webp', alt: 'Pokój 2' },
-		{ src: '/images/room-detail.webp', alt: 'Pokój 3' }
+	const mainImages = [
+		{ src: '/images/room-2person.webp', alt: 'Pokój 2-osobowy z dostępem do ogrodu' },
+		{ src: '/images/room-3person-new.webp', alt: 'Przestronny pokój 3-osobowy' },
+		{ src: '/images/room-2beds-blue.webp', alt: 'Elegancki pokój 2-osobowy' }
+	];
+
+	const thumbnailImages = [
+		{ src: '/images/room-window-view.webp', alt: 'Pokój z widokiem na zieleń' },
+		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi' },
+		{ src: '/images/room-bathroom.webp', alt: 'Dostosowana łazienka' },
+		{ src: '/images/room-care-beds.webp', alt: 'Pokój dla osób wymagających opieki' },
+		{ src: '/images/gallery-bed-detail.webp', alt: 'Komfortowe wyposażenie' }
 	];
 
 	const features = [
@@ -22,17 +29,15 @@
 		},
 		{
 			icon: Palmtree,
-			title: 'Tarasy z widokiem',
-			description: 'Każdy pokój posiada taras umożliwiający kontakt z naturą'
+			title: 'Bezpośredni dostęp do ogrodu',
+			description: 'Z każdego pokoju można wyjść bezpośrednio na zewnątrz i cieszyć się naturą'
+		},
+		{
+			icon: Home,
+			title: 'Parter bez barier',
+			description: 'Budynek dostosowany do osób niepełnosprawnych - wszystkie pokoje na parterze'
 		}
 	];
-
-	onMount(async () => {
-		const { register } = await import('swiper/element/bundle');
-		register();
-	});
-
-	let swiperEl: SwiperContainer;
 </script>
 
 <section id="rooms" class="scroll-m-8 bg-gradient-to-b from-warm-green-soft to-background py-20">
@@ -46,32 +51,18 @@
 		</div>
 
 		<div class="mx-auto mb-16 max-w-6xl items-center gap-12 lg:grid lg:grid-cols-2">
-			<div class="relative h-full">
-				<div class="carousel-wrapper relative mb-10 w-full overflow-hidden lg:mb-0 lg:h-[600px]">
-					<!-- svelte-ignore a11y_click_events_have_key_events -->
-					<!-- svelte-ignore a11y_no_static_element_interactions -->
-					<div class="nav-btn prev-btn" on:click={() => swiperEl?.swiper.slidePrev()}>
-						<ArrowLeft class="h-4 w-4" />
-					</div>
-
-					<swiper-container
-						bind:this={swiperEl}
-						slides-per-view="1"
-						centered-slides="true"
-						space-between="20"
-						allow-touch-move="true"
-					>
-						{#each rooms as room}
-							<swiper-slide>
-								<img src={room.src} alt={room.alt} class="h-auto lg:h-full" />
-							</swiper-slide>
+			<div class="mx-auto mt-10 mb-16 grid max-w-6xl items-center gap-12 lg:mt-0 lg:mb-0">
+				<div class="space-y-4">
+					<div class="grid grid-cols-2 gap-4">
+						{#each mainImages.slice(0, 2) as image}
+							<Dialog img_src={image.src} img_alt={image.alt} type="medium" />
 						{/each}
-					</swiper-container>
-
-					<!-- svelte-ignore a11y_click_events_have_key_events -->
-					<!-- svelte-ignore a11y_no_static_element_interactions -->
-					<div class="nav-btn next-btn" on:click={() => swiperEl?.swiper.slideNext()}>
-						<ArrowRight class="h-4 w-4" />
+					</div>
+					<Dialog img_src={mainImages[2].src} img_alt={mainImages[2].alt} />
+					<div class="grid grid-cols-5 gap-2 pt-2">
+						{#each thumbnailImages as image}
+							<Dialog img_src={image.src} img_alt={image.alt} type="small" />
+						{/each}
 					</div>
 				</div>
 			</div>
@@ -108,7 +99,7 @@
 						</li>
 						<li class="flex items-start gap-2 text-muted-foreground">
 							<CheckCircle2 class="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-							<span>WNowoczesne meble i funkcjonalne wyposażenie</span>
+							<span>Nowoczesne meble i funkcjonalne wyposażenie</span>
 						</li>
 						<li class="flex items-start gap-2 text-muted-foreground">
 							<CheckCircle2 class="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
@@ -120,76 +111,3 @@
 		</div>
 	</div>
 </section>
-
-<style>
-	.carousel-wrapper {
-		position: relative;
-		flex: 1 1 60%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	swiper-container {
-		width: 100%;
-		height: 100%;
-		border-radius: 20px;
-		overflow: hidden;
-		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-		backface-visibility: hidden;
-		transform: translateZ(0);
-		will-change: transform;
-	}
-
-	swiper-slide {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		background: #fff;
-	}
-
-	swiper-slide img {
-		width: 100%;
-		object-fit: cover;
-	}
-
-	/* Custom arrows */
-	.nav-btn {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		z-index: 10;
-		background: white;
-		border-radius: 9999px;
-		width: 34px;
-		height: 34px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		cursor: pointer;
-		transition: background 0.2s ease;
-	}
-
-	.nav-btn:hover {
-		background: hsl(35 60% 55%);
-		color: white;
-	}
-
-	.prev-btn {
-		left: 16px;
-	}
-
-	.next-btn {
-		right: 16px;
-	}
-
-	/* Pagination styling */
-	swiper-container::part(pagination-bullet) {
-		background: white;
-		opacity: 0.8;
-	}
-
-	swiper-container::part(pagination-bullet-active) {
-		background: white;
-	}
-</style>

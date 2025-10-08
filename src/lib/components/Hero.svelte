@@ -31,7 +31,9 @@
 >
 	<div class="absolute inset-0">
 		<img
-			src="/images/hero-panorama.webp"
+			src="/images/hero-small.webp"
+			srcset="/images/hero-small.webp 768w, /images/hero-panorama.webp 1200w"
+			sizes="(min-width: 769px) 1200px, 100vw"
 			alt="Rezydencja Seniora Leśny Zakątek"
 			class="h-full object-fill md:w-full md:object-cover"
 		/>
@@ -45,13 +47,15 @@
 	>
 		<div class="flex items-center justify-end">
 			<div class="animate-fade-in max-w-xl space-y-8 text-left">
-				<h1 class="text-4xl leading-tight font-bold text-balance md:text-5xl lg:text-6xl">
+				<h1
+					class="text-center text-4xl leading-tight font-bold text-balance md:text-left md:text-5xl lg:text-6xl"
+				>
 					<span class="text-white md:text-primary">Rezydencja Seniora</span>
 					<br />
 					<span class="text-accent">Leśny Zakątek</span>
 				</h1>
 
-				<p class="text-base text-white md:text-lg md:text-foreground/90">
+				<p class="text-center text-base text-white md:text-left md:text-lg md:text-foreground/90">
 					Nowoczesny dom opieki w otoczeniu jezior i lasów. Profesjonalna opieka, komfort i
 					serdeczna atmosfera dla Twoich bliskich.
 				</p>
@@ -75,18 +79,18 @@
 	</div>
 </section>
 
-<section class="mx-auto max-w-7xl bg-stone-50 py-12">
+<section class="bg-warm-green-subtle py-12">
 	<div class="container mx-auto px-4">
 		<div class="mx-auto max-w-7xl">
 			<div class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-6 lg:grid-cols-5">
 				{#each features as { icon: Icon, text }}
 					<div
-						class="group flex flex-col items-center gap-3 rounded-lg bg-green-100/80 p-4 transition-all hover:bg-green-100"
+						class="group flex flex-col items-center gap-3 rounded-lg bg-primary/5 p-4 transition-all hover:bg-primary/10"
 					>
 						<div
-							class="flex h-12 w-12 items-center justify-center rounded-full bg-green-200 transition-colors group-hover:bg-green-300"
+							class="flex h-12 w-12 items-center justify-center rounded-full bg-primary/15 transition-colors group-hover:bg-primary/20"
 						>
-							<Icon class="h-6 w-6 text-green-800" />
+							<Icon class="h-6 w-6 text-primary" />
 						</div>
 						<p class="text-center text-xs leading-snug font-medium text-foreground md:text-sm">
 							{text}

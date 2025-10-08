@@ -34,9 +34,10 @@
 <section id="contact" class="scroll-m-8 bg-background py-20">
 	<div class="container mx-auto px-4">
 		<div class="mx-auto mb-16 max-w-3xl text-center">
-			<h2 class="mb-6 text-4xl font-bold text-primary md:text-5xl">Skontaktuj się z nami</h2>
+			<h2 class="mb-6 text-4xl font-bold text-primary md:text-5xl">Zapraszamy do kontaktu</h2>
 			<p class="text-lg text-muted-foreground">
-				Chętnie odpowiemy na wszystkie pytania i umówimy na wizytę w naszym ośrodku.
+				Serdecznie zapraszamy do osobistego odwiedzenia naszego ośrodka. Z przyjemnością pokażemy
+				Wam nasz ośrodek pomieszczenia i odpowiemy na wszelkie pytania.
 			</p>
 		</div>
 
@@ -66,7 +67,7 @@
 			{/each}
 		</div>
 
-		<div class="mx-auto max-w-2xl text-center">
+		<div class="mx-auto max-w-6xl text-center">
 			<Card
 				clazz="border-primary/20 bg-gradient-to-br from-warm-green-subtle to-warm-green-soft p-8"
 			>

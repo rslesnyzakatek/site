@@ -12,9 +12,9 @@
 
 <section
 	id="dining"
-	class="mx-auto max-w-7xl scroll-m-8 bg-gradient-to-b from-background to-muted/20 py-20"
+	class="mx-auto scroll-m-8 bg-gradient-to-b from-warm-green-soft to-background py-20"
 >
-	<div class="container mx-auto px-4">
+	<div class="container mx-auto max-w-6xl px-4">
 		<div class="mb-16 text-center">
 			<h2 class="mb-4 text-4xl font-bold text-foreground md:text-5xl">Własna Kuchnia i Posiłki</h2>
 			<p class="mx-auto max-w-2xl text-lg text-muted-foreground">

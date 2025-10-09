@@ -2,17 +2,14 @@
 	import Dialog from '$lib/ui/Dialog.svelte';
 	import { Bed, CheckCircle2, Home, Palmtree } from '@lucide/svelte';
 
-	const mainImages = [
+	const images = [
 		{ src: '/images/room-2person.webp', alt: 'Pokój 2-osobowy z dostępem do ogrodu' },
 		{ src: '/images/room-3person-new.webp', alt: 'Przestronny pokój 3-osobowy' },
-		{ src: '/images/room-2beds-blue.webp', alt: 'Elegancki pokój 2-osobowy' }
-	];
-
-	const thumbnailImages = [
+		{ src: '/images/room-2beds-blue.webp', alt: 'Elegancki pokój 2-osobowy' },
 		{ src: '/images/room-window-view.webp', alt: 'Pokój z widokiem na zieleń' },
 		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi' },
 		{ src: '/images/room-bathroom.webp', alt: 'Dostosowana łazienka' },
-		{ src: '/images/room-care-beds.webp', alt: 'Pokój dla osób wymagających opieki' },
+		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi' },
 		{ src: '/images/gallery-bed-detail.webp', alt: 'Komfortowe wyposażenie' }
 	];
 
@@ -38,6 +35,8 @@
 			description: 'Budynek dostosowany do osób niepełnosprawnych - wszystkie pokoje na parterze'
 		}
 	];
+
+	console.log(images.slice(3, 7));
 </script>
 
 <section id="rooms" class="scroll-m-8 bg-gradient-to-b from-warm-green-soft to-background py-20">
@@ -54,15 +53,17 @@
 			<div class="mx-auto mt-10 mb-16 grid max-w-6xl items-center gap-12 lg:mt-0 lg:mb-0">
 				<div class="space-y-4">
 					<div class="grid grid-cols-2 gap-4">
-						{#each mainImages.slice(0, 2) as image}
-							<Dialog img_src={image.src} img_alt={image.alt} type="medium" />
+						{#each images.slice(0, 2) as image, i}
+							<Dialog img_nr={i} img_alt={image.alt} type="medium" />
 						{/each}
 					</div>
-					<Dialog img_src={mainImages[2].src} img_alt={mainImages[2].alt} />
+					<Dialog img_nr={2} img_alt={images[2].alt} />
 					<div class="grid grid-cols-5 gap-2 pt-2">
-						{#each thumbnailImages as image}
-							<Dialog img_src={image.src} img_alt={image.alt} type="small" />
-						{/each}
+						<Dialog img_nr={3} img_alt={images[3].alt} type="small" />
+						<Dialog img_nr={4} img_alt={images[4].alt} type="small" />
+						<Dialog img_nr={5} img_alt={images[5].alt} type="small" />
+						<Dialog img_nr={6} img_alt={images[6].alt} type="small" />
+						<Dialog img_nr={7} img_alt={images[7].alt} type="small" />
 					</div>
 				</div>
 			</div>

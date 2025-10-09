@@ -69,7 +69,7 @@
 						scrolling="no"
 						marginheight="0"
 						marginwidth="0"
-						src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=53.659361,15.097667+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+						src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=53.659361,15.097667&amp;center=53.659361,15.097667&amp;zoom=14&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
 						><a href="https://www.mapsdirections.info/it/calcola-la-popolazione-su-una-mappa/"
 							>nav</a
 						>
@@ -79,3 +79,27 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	/* Dodanie stylów dla responsywności iframe */
+	iframe {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
+	.aspect-video {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+		height: 0;
+		overflow: hidden;
+	}
+
+	.aspect-video iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>

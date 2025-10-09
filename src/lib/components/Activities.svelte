@@ -156,8 +156,8 @@
 		<div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-2">
 			<div class="space-y-6">
 				{#each activities as { icon: Icon, title, description }}
-					<div
-						class="border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+					<Card
+						clazz="border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
 					>
 						<div class="flex items-start gap-4">
 							<div class="flex-shrink-0">
@@ -174,7 +174,7 @@
 								<p class="text-sm text-muted-foreground">{description}</p>
 							</div>
 						</div>
-					</div>
+					</Card>
 				{/each}
 			</div>
 

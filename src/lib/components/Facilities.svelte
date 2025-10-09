@@ -58,15 +58,12 @@
 							class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
 						/>
 					</div>
-					<div
-						class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-transparent"
-					></div>
-					<div class="absolute right-0 bottom-0 left-0 p-6 text-primary-foreground">
-						<Icon class="mb-3 h-8 w-8 text-accent" />
-						<h3 class="mb-2 text-2xl font-bold">{title}</h3>
-						<p class="text-sm leading-relaxed text-primary-foreground/90">
-							{description}
-						</p>
+					<div class="p-6 text-left">
+						<div class="flex items-center gap-3">
+							<Icon class="h-8 w-8 text-accent" />
+							<h3 class="text-2xl font-bold">{title}</h3>
+						</div>
+						<p class="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
 					</div>
 				</div>
 			{/each}
@@ -82,20 +79,19 @@
 					class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
 				/>
 			</div>
-			<div
-				class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/70 to-transparent"
-			></div>
-			<div class="absolute right-0 bottom-0 left-0 p-8 text-primary-foreground">
-				<Users class="mb-3 h-8 w-8 text-accent" />
-				<h3 class="mb-4 text-xl font-bold md:text-4xl">Profesjonalny zespół opiekunów</h3>
+			<div class="p-8 text-left">
+				<div class="flex items-center gap-3">
+					<Users class="h-8 w-8 text-accent" />
+					<h3 class="text-xl font-bold md:text-4xl">Profesjonalny zespół opiekunów</h3>
+				</div>
 				<p
-					class="max-w-4xl text-xs leading-relaxed text-primary-foreground/90 md:mb-6 md:block md:text-lg"
+					class="mt-4 max-w-4xl text-xs leading-relaxed text-muted-foreground md:mb-6 md:block md:text-lg"
 				>
 					Naszym największym atutem są życzliwi, doświadczeni opiekunowie, którzy z sercem podchodzą
 					do każdego mieszkańca. Zapewniamy profesjonalną opiekę medyczną i codzienne wsparcie w
 					przyjaznej, rodzinnej atmosferze.
 				</p>
-				<div class="hidden flex-wrap gap-8 text-primary-foreground md:flex md:text-base">
+				<div class="hidden flex-wrap gap-8 text-muted-foreground md:flex md:text-base">
 					<div class="flex items-center gap-2">
 						<Heart class="h-6 w-6" />
 						<span class="font-semibold">Serdeczna opieka</span>

@@ -59,7 +59,7 @@
 				<ul class="hidden items-center space-x-8 md:flex">
 					{#each navLinks as { label, href }}
 						<li class="text-white transition-colors duration-200 hover:text-green-200">
-							<a {href}>{label}</a>
+							<a data-sveltekit-reload {href}>{label}</a>
 						</li>
 					{/each}
 					<li>

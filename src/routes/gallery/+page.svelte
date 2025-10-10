@@ -2,6 +2,7 @@
 	import { X } from '@lucide/svelte';
 
 	const images = [
+		{ src: '/images/gallery-building.webp', alt: 'Elegancki pokój 2-osobowy', category: 'Pokoje' },
 		{
 			src: '/images/room-2person.webp',
 			alt: 'Pokój 2-osobowy z dostępem do ogrodu',
@@ -12,12 +13,11 @@
 			alt: 'Przestronny pokój 3-osobowy',
 			category: 'Pokoje'
 		},
-		{ src: '/images/room-2beds-blue.webp', alt: 'Elegancki pokój 2-osobowy', category: 'Pokoje' },
 		{ src: '/images/room-window-view.webp', alt: 'Pokój z widokiem na zieleń', category: 'Pokoje' },
 		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi', category: 'Pokoje' },
 		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi', category: 'Pokoje' },
 		{ src: '/images/room-bathroom.webp', alt: 'Dostosowana łazienka', category: 'Łazienki' },
-		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi', category: 'Pokoje' },
+		{ src: '/images/room-detail.webp', alt: 'Pokój z łóżkami medycznymi', category: 'Pokoje' },
 		{ src: '/images/gallery-bed-detail.webp', alt: 'Komfortowe wyposażenie', category: 'Pokoje' }
 	];
 
@@ -30,6 +30,10 @@
 		img = true;
 	};
 </script>
+
+<svelte:head>
+	<title>Rezydencja Seniora Leśny Zakątek | Dom Opieki w Nowogardzie - Galeria</title>
+</svelte:head>
 
 <div class="min-h-screen">
 	<section class="bg-gradient-to-b from-warm-green-subtle to-background pt-32 pb-16">
@@ -80,14 +84,14 @@
 
 {#if img}
 	<div class="fixed inset-0 z-40 mt-10 flex items-center justify-center bg-black/70 p-4">
-		<div class="relative max-h-full max-w-full overflow-auto rounded-lg bg-white p-4 shadow-lg">
+		<div class="relative max-h-full max-w-full overflow-auto rounded-lg bg-black px-20 shadow-lg">
 			<button
-				class="absolute top-2 right-2 z-40 rounded-full bg-white p-2 text-gray-700 hover:bg-gray-200"
+				class="absolute top-4 right-4 z-40 cursor-pointer rounded-full bg-white p-2 text-gray-700 hover:bg-gray-200"
 				on:click={() => (img = false)}
 			>
 				<X class="h-6 w-6" />
 			</button>
-			<img src={imgSrc} alt="Powiększony obrazek" class="max-h-[80vh] w-auto rounded" />
+			<img src={imgSrc} alt="Powiększony obrazek" class="max-h-[80vh] w-auto" />
 		</div>
 	</div>
 {/if}

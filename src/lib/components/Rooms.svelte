@@ -35,8 +35,6 @@
 			description: 'Budynek dostosowany do osób niepełnosprawnych - wszystkie pokoje na parterze'
 		}
 	];
-
-	console.log(images.slice(3, 7));
 </script>
 
 <section id="rooms" class="scroll-m-8 bg-gradient-to-b from-warm-green-soft to-background py-20">

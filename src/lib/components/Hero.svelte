@@ -38,29 +38,29 @@
 			class="h-full object-fill md:w-full md:object-cover"
 		/>
 		<div
-			class="absolute bg-gradient-to-r from-transparent from-50% to-background/85 to-50% md:inset-0"
+			class="absolute bg-gradient-to-r from-transparent from-50% to-background/85 to-50% lg:inset-0"
 		></div>
 	</div>
 
 	<div
-		class="relative z-10 container mx-4 mt-4 rounded-lg bg-foreground/60 px-4 py-4 shadow-md md:mx-auto md:mt-0 md:bg-transparent md:px-0 md:shadow-none"
+		class="relative z-10 container mx-4 mt-4 rounded-lg bg-background/75 px-4 py-4 shadow-md md:mx-auto md:mt-0 md:px-0 md:shadow-none lg:bg-transparent"
 	>
-		<div class="flex items-center justify-end">
+		<div class="flex items-center justify-center lg:justify-end">
 			<div class="animate-fade-in max-w-xl space-y-8 text-left">
 				<h1
-					class="text-center text-4xl leading-tight font-bold text-balance md:text-left md:text-5xl lg:text-6xl"
+					class="text-center text-4xl leading-tight font-bold text-balance md:text-5xl lg:text-left lg:text-6xl"
 				>
-					<span class="text-white md:text-primary">Rezydencja Seniora</span>
+					<span class=" text-primary">Rezydencja Seniora</span>
 					<br />
 					<span class="text-accent">Leśny Zakątek</span>
 				</h1>
 
-				<p class="text-center text-base text-white md:text-left md:text-lg md:text-foreground/90">
+				<p class="text-center text-base text-foreground/90 md:text-lg lg:text-left">
 					Nowoczesny dom opieki w otoczeniu jezior i lasów. Profesjonalna opieka, komfort i
 					serdeczna atmosfera dla Twoich bliskich.
 				</p>
 
-				<div class="flex flex-wrap justify-center gap-6 pt-6 md:justify-start">
+				<div class="flex flex-wrap justify-center gap-6 pt-6 lg:justify-start">
 					<Button size="lg" clazz="text-base px-6 py-5 hover:scale-105 transition-transform">
 						<Phone class="mr-2 h-5 w-5" />
 						Zadzwoń do nas

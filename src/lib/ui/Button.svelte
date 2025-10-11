@@ -3,6 +3,7 @@
 		'default';
 	export let size: 'default' | 'sm' | 'lg' = 'default';
 	export let clazz = '';
+	export let disabled: boolean = false;
 
 	let variantBase = {
 		default: 'bg-primary text-primary-foreground hover:bg-primary/90',
@@ -23,6 +24,7 @@
 
 <button
 	on:click
+	{disabled}
 	class={`inline-flex items-center justify-center gap-2 rounded-md font-medium 
     whitespace-nowrap ring-offset-background transition-colors focus-visible:ring-2 focus-visible:ring-ring 
     focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 

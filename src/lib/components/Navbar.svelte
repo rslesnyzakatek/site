@@ -3,6 +3,7 @@
 	import { MenuIcon } from '@lucide/svelte';
 	import logo from '$lib/assets/logo-light.svg';
 	import { fly } from 'svelte/transition';
+	import { goto } from '$app/navigation';
 
 	let navbarVisible = false;
 
@@ -23,9 +24,10 @@
 	let scrolling = false;
 
 	const scrollToContact = () => {
-		const contactSection = document.getElementById('contact');
-		if (contactSection) {
-			contactSection.scrollIntoView({ behavior: 'smooth' });
+		goto('/#contact');
+
+		if (navbarVisible) {
+			navbarVisible = false;
 		}
 	};
 

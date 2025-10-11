@@ -1,7 +1,10 @@
 <script lang="ts">
+	import emailjs from '@emailjs/browser';
 	import Button from '$lib/ui/Button.svelte';
 	import Card from '$lib/ui/Card.svelte';
 	import { MapPin, Phone, Mail, Clock, Send } from '@lucide/svelte';
+	import { writable } from 'svelte/store';
+	import { fly } from 'svelte/transition';
 
 	const contactInfo = [
 		{
@@ -20,7 +23,7 @@
 			icon: MapPin,
 			title: 'Adres',
 			details: ['Olchowo 101 72-200 Nowogard', 'województwo zachodniopomorskie'],
-			action: '#location'
+			action: 'https://maps.app.goo.gl/Ly19KoQpNiye1yfJ6'
 		},
 		{
 			icon: Clock,
@@ -39,6 +42,8 @@
 
 	let errors: { [key: string]: string } = {};
 	let isSubmitting = false;
+	const toastMessage = writable<string | null>(null);
+
 	const validate = () => {
 		const newErrors: { [key: string]: string } = {};
 		if (!formData.name.trim()) {
@@ -61,14 +66,25 @@
 		if (Object.keys(errors).length === 0) {
 			isSubmitting = true;
 			try {
-				console.log('Form Data:', formData);
-				await new Promise((resolve) => setTimeout(resolve, 2000));
-				alert('Wiadomość została wysłana. Skontaktujemy się z Tobą wkrótce!');
+				await emailjs.send(
+					'service_form',
+					'template_7jjqjrr',
+					{
+						title: 'Formularz kontaktowy ze strony',
+						name: formData.name,
+						email: formData.email,
+						phone: formData.phone,
+						message: formData.message
+					},
+					'Yf4SNVhJSYCRpvnH7'
+				);
+				toastMessage.set('Wiadomość wysłana! Skontaktujemy się z Tobą wkrótce.');
 				formData = { name: '', email: '', phone: '', message: '' };
 			} catch (error) {
-				alert('Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.');
+				toastMessage.set('Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie.');
 			} finally {
 				isSubmitting = false;
+				setTimeout(() => toastMessage.set(null), 5000);
 			}
 		}
 	};
@@ -87,14 +103,15 @@
 			<h2 class="mb-6 text-4xl font-bold text-primary md:text-5xl">Zapraszamy do kontaktu</h2>
 			<p class="text-lg text-muted-foreground">
 				Serdecznie zapraszamy do osobistego odwiedzenia naszego ośrodka. Z przyjemnością pokażemy
-				Wam nasz ośrodek pomieszczenia i odpowiemy na wszelkie pytania.
+				Wam nasz ośrodek i odpowiemy na wszelkie pytania.
 			</p>
 		</div>
 
 		<div class="mx-auto mb-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-			{#each contactInfo as { icon: Icon, title, details } (title)}
-				<Card
-					clazz="bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+			{#each contactInfo as { icon: Icon, title, details, action }, i (title)}
+				<a
+					href={action}
+					class="rounded-lg border bg-card p-6 text-center text-card-foreground shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
 				>
 					<div
 						class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10"
@@ -113,7 +130,7 @@
 							{detail}
 						</p>
 					{/each}
-				</Card>
+				</a>
 			{/each}
 		</div>
 
@@ -191,7 +208,13 @@
 						{/if}
 					</div>
 
-					<Button variant="default" size="lg" clazz="w-full text-lg" on:click={handleSubmit}>
+					<Button
+						variant="default"
+						size="lg"
+						clazz="w-full text-lg"
+						on:click={handleSubmit}
+						disabled={isSubmitting}
+					>
 						<Send class="mr-2 h-5 w-5" />
 						{isSubmitting ? 'Wysyłanie...' : 'Wyślij wiadomość'}
 					</Button>
@@ -200,3 +223,13 @@
 		</div>
 	</div>
 </section>
+
+{#if $toastMessage}
+	<div
+		class="fixed right-4 bottom-4 z-50 w-80 rounded-lg bg-white p-4 shadow-lg transition-transform duration-300"
+		in:fly={{ y: 100, duration: 300 }}
+		out:fly={{ y: 100, duration: 300 }}
+	>
+		<p class="text-left text-sm font-medium text-gray-800">{$toastMessage}</p>
+	</div>
+{/if}

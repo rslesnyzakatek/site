@@ -16,14 +16,9 @@
 	const features = [
 		{
 			icon: Bed,
-			title: '36 nowoczesnych pokojów',
+			title: '36 nowoczesnych pokoi',
 			description:
 				'Eleganckie, nowo urządzone 2 lub 3-osobowe pokoje dostosowane do potrzeb seniora'
-		},
-		{
-			icon: Home,
-			title: '36 pokoi w 3 skrzydłach',
-			description: 'Wszystkie pokoje znajdują się na parterze dla wygody mieszkańców'
 		},
 		{
 			icon: Palmtree,

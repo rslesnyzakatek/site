@@ -61,8 +61,8 @@
 		<div class="mx-auto mb-16 max-w-3xl text-center">
 			<h2 class="mb-6 text-4xl font-bold text-primary md:text-5xl">Aktywności i zajęcia</h2>
 			<p class="text-lg text-muted-foreground">
-				Dbamy o to, by nasi mieszkańcy byli aktywni fizycznie, społecznie i intelektualnie. Każdy
-				dzień w naszym ośrodku to możliwość rozwoju i radości z życia.
+				Dbamy o to, by nasi mieszkańcy byli aktywni fizycznie, społecznie i intelektualnie. <br />
+				Każdy dzień w naszym ośrodku to możliwość rozwoju i radości z życia.
 			</p>
 		</div>
 

@@ -3,7 +3,7 @@
 
 	const meals = [
 		{ icon: UtensilsCrossed, title: 'Śniadanie', description: 'Pełnowartościowy początek dnia' },
-		{ icon: Coffee, title: 'Słodki Lunch', description: 'Kawa i domowe ciasto' },
+		{ icon: Coffee, title: 'Słodki Lunch', description: 'Kawa i coś słodkiego' },
 		{ icon: UtensilsCrossed, title: 'Obiad', description: 'Ciepły, pełnowartościowy posiłek' },
 		{ icon: Coffee, title: 'Podwieczorek', description: 'Lekka przekąska' },
 		{ icon: UtensilsCrossed, title: 'Kolacja', description: 'Pożywny posiłek wieczorny' }

@@ -16,8 +16,9 @@
 	const features = [
 		{
 			icon: Bed,
-			title: 'Pokoje 2 i 3-osobowe',
-			description: 'Eleganckie, nowo urządzone pokoje dostosowane do potrzeb mieszkańców'
+			title: '36 nowoczesnych pokojów',
+			description:
+				'Eleganckie, nowo urządzone 2 lub 3-osobowe pokoje dostosowane do potrzeb seniora'
 		},
 		{
 			icon: Home,
@@ -26,7 +27,7 @@
 		},
 		{
 			icon: Palmtree,
-			title: 'Bezpośredni dostęp do ogrodu',
+			title: 'Bezpośredni dostęp do patio',
 			description: 'Z każdego pokoju można wyjść bezpośrednio na zewnątrz i cieszyć się naturą'
 		},
 		{
@@ -90,11 +91,11 @@
 					<ul class="space-y-3">
 						<li class="flex items-start gap-2 text-muted-foreground">
 							<CheckCircle2 class="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-							<span>Wygodne łóżka z materacami najwyższej jakości</span>
+							<span>Wygodne łózka z materacami najwyższej jakości</span>
 						</li>
 						<li class="flex items-start gap-2 text-muted-foreground">
 							<CheckCircle2 class="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-							<span>Prywatny taras z dostępem do zieleni</span>
+							<span>Taras z dostępem do zieleni</span>
 						</li>
 						<li class="flex items-start gap-2 text-muted-foreground">
 							<CheckCircle2 class="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
@@ -102,7 +103,11 @@
 						</li>
 						<li class="flex items-start gap-2 text-muted-foreground">
 							<CheckCircle2 class="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
-							<span>Jasne, przestronne wnętrza pełne światła</span>
+							<span>Łazienka dostosowana do potrzeb osób niepełnosprawnych</span>
+						</li>
+						<li class="flex items-start gap-2 text-muted-foreground">
+							<CheckCircle2 class="mt-0.5 h-5 w-5 flex-shrink-0 text-primary" />
+							<span>Jasne i przestronne wnętrze pełne światła</span>
 						</li>
 					</ul>
 				</div>

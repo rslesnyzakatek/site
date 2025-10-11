@@ -49,7 +49,7 @@
 		<div class="mb-16 grid gap-8 md:grid-cols-3">
 			{#each facilities as { icon: Icon, title, description, image }}
 				<div
-					class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl"
+					class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-green-50 to-green-100/50 shadow-lg transition-all duration-300 hover:shadow-2xl"
 				>
 					<div class="aspect-[4/3] overflow-hidden">
 						<img
@@ -60,7 +60,7 @@
 					</div>
 					<div class="p-6 text-left">
 						<div class="flex items-center gap-3">
-							<Icon class="h-8 w-8 text-accent" />
+							<Icon class="h-8 w-8 text-green-800" />
 							<h3 class="text-2xl font-bold">{title}</h3>
 						</div>
 						<p class="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
@@ -79,9 +79,9 @@
 					class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
 				/>
 			</div>
-			<div class="p-8 text-left">
+			<div class="bg-gradient-to-br from-green-50 to-green-100/50 p-8 text-left">
 				<div class="flex items-center gap-3">
-					<Users class="h-8 w-8 text-accent" />
+					<Users class="h-8 w-8 text-green-800" />
 					<h3 class="text-xl font-bold md:text-4xl">Profesjonalny zespół opiekunów</h3>
 				</div>
 				<p
@@ -93,15 +93,15 @@
 				</p>
 				<div class="hidden flex-wrap gap-8 text-muted-foreground md:flex md:text-base">
 					<div class="flex items-center gap-2">
-						<Heart class="h-6 w-6" />
+						<Heart class="h-6 w-6 text-green-700" />
 						<span class="font-semibold">Serdeczna opieka</span>
 					</div>
 					<div class="flex items-center gap-2">
-						<Award class="h-6 w-6" />
+						<Award class="h-6 w-6 text-green-700" />
 						<span class="font-semibold">Doświadczenie</span>
 					</div>
 					<div class="flex items-center gap-2">
-						<Users class="h-6 w-6" />
+						<Users class="h-6 w-6 text-green-700" />
 						<span class="font-semibold">Indywidualne podejście</span>
 					</div>
 				</div>

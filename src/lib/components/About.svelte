@@ -13,13 +13,13 @@
 			icon: Heart,
 			title: 'Profesjonalna opieka',
 			description:
-				'Całodobowa opieka pielęgniarska i rehabilitacja zapewniana przez wykwalifikowany, doświadczony personel medyczny.'
+				'Nasi wykwalifikowani opiekunowie czuwają nad dobrem naszych podopiecznych 24 godziny na dobę, 7 dni w tygodniu.'
 		},
 		{
 			icon: Users,
 			title: 'Kulturalna kadra',
 			description:
-				'Nasz zespół to wykwalifikowani opiekunowie, którzy tworzą przyjazną, rodzinną atmosferę i traktują każdego rezydenta z szacunkiem.'
+				'Nasz zespół to profesjonalni opiekunowie z sercem na dłoni, dla których rodzinna atmosfera i szacunek wobec rezydentów są priorytetem.'
 		},
 		{
 			icon: Award,

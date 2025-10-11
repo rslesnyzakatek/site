@@ -30,13 +30,15 @@
 	class="relative flex min-h-[600px] items-center justify-center overflow-hidden bg-background lg:min-h-[700px]"
 >
 	<div class="absolute inset-0">
-		<img
-			src="/images/hero-small.webp"
-			srcset="/images/hero-small.webp 768w, /images/hero-panorama.webp 1200w"
-			sizes="(min-width: 769px) 1200px, 100vw"
-			alt="Rezydencja Seniora Leśny Zakątek"
-			class="h-full object-fill md:w-full md:object-cover"
-		/>
+		<picture>
+			<source media="(min-width: 1024px)" srcset="/images/hero-panorama.webp" />
+			<img
+				src="/images/hero-small.webp"
+				alt="Rezydencja Seniora Leśny Zakątek"
+				class="h-full w-full object-fill md:object-cover"
+			/>
+		</picture>
+
 		<div
 			class="absolute bg-gradient-to-r from-transparent from-50% to-background/85 to-50% lg:inset-0"
 		></div>

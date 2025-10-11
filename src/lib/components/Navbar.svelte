@@ -52,11 +52,11 @@
 			<a class="h-14" href="/">
 				<img src={logo} alt="Leśny Zakątek" class="h-full w-auto" />
 			</a>
-			<button on:click={toggleMenu} aria-label="Otwórz menu" class="md:hidden">
-				<MenuIcon class="h-6 w-6 cursor-pointer text-white hover:text-green-200 md:hidden" />
+			<button on:click={toggleMenu} aria-label="Otwórz menu" class="lg:hidden">
+				<MenuIcon class="h-6 w-6 cursor-pointer text-white hover:text-green-200 lg:hidden" />
 			</button>
-			<div class="hidden items-center md:flex">
-				<ul class="hidden items-center space-x-8 md:flex">
+			<div class="hidden items-center lg:flex">
+				<ul class="hidden items-center space-x-8 lg:flex">
 					{#each navLinks as { label, href }}
 						<li class="text-white transition-colors duration-200 hover:text-green-200">
 							<a data-sveltekit-reload {href}>{label}</a>

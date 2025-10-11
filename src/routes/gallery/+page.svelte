@@ -2,23 +2,24 @@
 	import { X } from '@lucide/svelte';
 
 	const images = [
-		{ src: '/images/gallery-building.webp', alt: 'Elegancki pokój 2-osobowy', category: 'Pokoje' },
+		{ src: '/gallery/zdj (1).webp', alt: 'Elegancki pokój 2-osobowy', category: 'Budynek' },
 		{
-			src: '/images/room-2person.webp',
+			src: '/gallery/zdj (2).webp',
 			alt: 'Pokój 2-osobowy z dostępem do ogrodu',
-			category: 'Budynek'
-		},
-		{
-			src: '/images/room-3person-new.webp',
-			alt: 'Przestronny pokój 3-osobowy',
 			category: 'Pokoje'
 		},
-		{ src: '/images/room-window-view.webp', alt: 'Pokój z widokiem na zieleń', category: 'Pokoje' },
-		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi', category: 'Pokoje' },
-		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi', category: 'Pokoje' },
-		{ src: '/images/room-bathroom.webp', alt: 'Dostosowana łazienka', category: 'Łazienki' },
-		{ src: '/images/room-detail.webp', alt: 'Pokój z łóżkami medycznymi', category: 'Pokoje' },
-		{ src: '/images/gallery-bed-detail.webp', alt: 'Komfortowe wyposażenie', category: 'Pokoje' }
+		{ src: '/gallery/zdj (3).webp', alt: 'Przestronny pokój 2-osobowy', category: 'Pokoje' },
+		{ src: '/gallery/zdj (4).webp', alt: 'Komfortowe wyposażenie', category: 'Pokoje' },
+		{ src: '/gallery/zdj (5).webp', alt: 'Komfortowe wyposażenie', category: 'Pokoje' },
+		{ src: '/gallery/zdj (6).webp', alt: 'Duża sala dzienna', category: 'Sale dzienne' },
+		{ src: '/gallery/zdj (7).webp', alt: 'Przestronny pokój 2-osobowy', category: 'Pokoje' },
+		{ src: '/gallery/zdj (8).webp', alt: 'Łazienka dostosowana', category: 'Łazienki' },
+		{ src: '/gallery/zdj (9).webp', alt: 'Komfortowe wyposażenie', category: 'Pokoje' },
+		{ src: '/gallery/zdj (10).webp', alt: 'Sala dzienna', category: 'Sale dzienne' },
+		{ src: '/gallery/zdj (11).webp', alt: 'Sala dzienna', category: 'Sale dzienne' },
+		{ src: '/gallery/zdj (12).webp', alt: 'Duża sala dzienna', category: 'Sale dzienne' },
+		{ src: '/gallery/zdj (13).webp', alt: 'Duża sala dzienna', category: 'Sale dzienne' },
+		{ src: '/gallery/zdj (14).webp', alt: 'Duża sala dzienna', category: 'Sale dzienne' }
 	];
 
 	let img = false;
@@ -83,15 +84,17 @@
 </div>
 
 {#if img}
-	<div class="fixed inset-0 z-40 mt-10 flex items-center justify-center bg-black/70 p-4">
-		<div class="relative max-h-full max-w-full overflow-auto rounded-lg bg-black px-20 shadow-lg">
+	<div class="fixed inset-0 z-40 flex items-center justify-center bg-black/70 p-4">
+		<div
+			class="relative max-h-full max-w-full overflow-auto rounded-lg bg-black shadow-lg md:px-20"
+		>
 			<button
 				class="absolute top-4 right-4 z-40 cursor-pointer rounded-full bg-white p-2 text-gray-700 hover:bg-gray-200"
 				on:click={() => (img = false)}
 			>
 				<X class="h-6 w-6" />
 			</button>
-			<img src={imgSrc} alt="Powiększony obrazek" class="max-h-[80vh] w-auto" />
+			<img src={imgSrc} alt="Powiększony obrazek" class="max-h-[90vh] w-auto md:max-h-[80vh]" />
 		</div>
 	</div>
 {/if}

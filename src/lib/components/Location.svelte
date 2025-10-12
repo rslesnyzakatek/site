@@ -43,7 +43,7 @@
 		<div class="mx-auto grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
 			{#each locationFeatures as { icon: Icon, title, description } (title)}
 				<Card
-					clazz="bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+					clazz="bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg border-border"
 				>
 					<div
 						class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10"

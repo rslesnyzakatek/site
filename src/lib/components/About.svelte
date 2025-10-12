@@ -7,7 +7,7 @@
 			icon: Shield,
 			title: 'Legalność i bezpieczeństwo',
 			description:
-				'Zarejestrowany i w pełni legalny ośrodek opieki nad seniorem. Posiadamy wszelkie wymagane pozwolenia i certyfikaty.'
+				'Na mocy decyzji nr WZPS-3.9423.5.2025.EG z dnia 30.09.2025r. nasz ośrodek został wpisany pod numerem 32 do rejestru placówek zapewniających całodobową opiekę osobom niepełnosprawnym, przewlekle chorym lub osobom w podeszłym wieku, prowadzonego przez Wojewodę Zachodniopomorskiego.'
 		},
 		{
 			icon: Heart,

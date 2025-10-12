@@ -9,7 +9,6 @@
 		{ src: '/images/room-window-view.webp', alt: 'Pokój z widokiem na zieleń' },
 		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi' },
 		{ src: '/images/room-bathroom.webp', alt: 'Dostosowana łazienka' },
-		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi' },
 		{ src: '/images/gallery-bed-detail.webp', alt: 'Komfortowe wyposażenie' }
 	];
 
@@ -52,12 +51,11 @@
 						{/each}
 					</div>
 					<Dialog img_nr={2} img_alt={images[2].alt} />
-					<div class="grid grid-cols-5 gap-2 pt-2">
+					<div class="grid grid-cols-4 gap-2 pt-2">
 						<Dialog img_nr={3} img_alt={images[3].alt} type="small" />
 						<Dialog img_nr={4} img_alt={images[4].alt} type="small" />
 						<Dialog img_nr={5} img_alt={images[5].alt} type="small" />
 						<Dialog img_nr={6} img_alt={images[6].alt} type="small" />
-						<Dialog img_nr={7} img_alt={images[7].alt} type="small" />
 					</div>
 				</div>
 			</div>

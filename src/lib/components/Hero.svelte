@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	import Button from '$lib/ui/Button.svelte';
 	import { Phone, Mail, ShieldCheck, Building2, Bed, Heart, Utensils } from '@lucide/svelte';
 
@@ -27,7 +28,7 @@
 </script>
 
 <section
-	class="relative flex min-h-[600px] items-center justify-center overflow-hidden bg-background lg:min-h-[700px]"
+	class="relative min-h-[600px] items-center justify-center overflow-hidden bg-background p-4 lg:flex lg:min-h-[700px]"
 >
 	<div class="absolute inset-0">
 		<picture>
@@ -45,10 +46,10 @@
 	</div>
 
 	<div
-		class="relative z-10 container mx-4 mt-4 rounded-lg bg-background/75 px-4 py-4 shadow-md md:mx-auto md:mt-0 md:px-0 md:shadow-none lg:bg-transparent"
+		class="relative z-10 container mx-auto mt-24 rounded-xl bg-background/55 px-4 py-4 shadow-md md:px-0 md:shadow-none lg:mx-4 lg:bg-transparent"
 	>
-		<div class="flex items-center justify-center lg:justify-end">
-			<div class="animate-fade-in max-w-xl space-y-8 text-left">
+		<div class="flex items-center justify-center lg:mr-4 lg:justify-end xl:mr-16">
+			<div class="max-w-xl space-y-8 text-left">
 				<h1
 					class="text-center text-4xl leading-tight font-bold text-balance md:text-5xl lg:text-left lg:text-6xl"
 				>
@@ -58,22 +59,18 @@
 				</h1>
 
 				<p class="text-center text-base text-foreground/90 md:text-lg lg:text-left">
-					Nowoczesny dom opieki w otoczeniu jezior i lasów. Profesjonalna opieka, komfort i
-					serdeczna atmosfera dla Twoich bliskich.
+					Nowoczesny dom opieki w otoczeniu jezior i lasów. <br />
+					Profesjonalna opieka, komfort i serdeczna atmosfera dla Twoich bliskich.
 				</p>
 
-				<div class="flex flex-wrap justify-center gap-6 pt-6 lg:justify-start">
-					<Button size="lg" clazz="text-base px-6 py-5 hover:scale-105 transition-transform">
-						<Phone class="mr-2 h-5 w-5" />
-						Zadzwoń do nas
-					</Button>
+				<div class="hidden flex-wrap justify-center gap-6 pt-6 lg:flex lg:justify-start">
 					<Button
 						size="lg"
-						variant="outline"
-						clazz="text-base px-6 py-5 hover:scale-105 transition-transform"
+						clazz="text-base w-full px-6 py-5 hover:scale-105 transition-transform cursor-pointer"
+						on:click={() => goto('/#contact')}
 					>
-						<Mail class="mr-2 h-5 w-5" />
-						Napisz do nas
+						<Phone class="mr-2 h-5 w-5" />
+						Skontaktuj się z nami
 					</Button>
 				</div>
 			</div>

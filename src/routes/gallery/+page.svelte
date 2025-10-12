@@ -99,7 +99,7 @@
 				<img
 					src={imgSrc}
 					alt="Powiększony obrazek"
-					class="max-h-[70vh] max-w-[70vw] object-contain"
+					class="modal-image max-h-[70vh] max-w-[70vw] object-contain"
 				/>
 			</div>
 			<div class="absolute top-0 left-0 z-30 flex h-full w-full items-center">
@@ -119,3 +119,12 @@
 		</div>
 	</div>
 {/if}
+
+<style>
+	@media (max-width: 768px) {
+		.modal-image {
+			max-height: 90vh;
+			max-width: 90vw;
+		}
+	}
+</style>

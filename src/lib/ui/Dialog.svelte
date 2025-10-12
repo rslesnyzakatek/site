@@ -8,7 +8,6 @@
 		{ src: '/images/room-window-view.webp', alt: 'Pokój z widokiem na zieleń' },
 		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi' },
 		{ src: '/images/room-bathroom.webp', alt: 'Dostosowana łazienka' },
-		{ src: '/images/room-care-beds.webp', alt: 'Pokój z łóżkami medycznymi' },
 		{ src: '/images/gallery-bed-detail.webp', alt: 'Komfortowe wyposażenie' }
 	];
 

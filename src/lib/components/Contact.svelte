@@ -28,7 +28,7 @@
 		{
 			icon: Clock,
 			title: 'Odwiedziny',
-			details: ['Codziennie', 'Codziennie 10:00 - 17:00'],
+			details: ['Codziennie', '10:00 - 17:00'],
 			action: 'tel:+48123456789'
 		}
 	];
@@ -111,7 +111,7 @@
 			{#each contactInfo as { icon: Icon, title, details, action }, i (title)}
 				<a
 					href={action}
-					class="rounded-lg border bg-card p-6 text-center text-card-foreground shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+					class="rounded-lg border border-border bg-card p-6 text-center text-card-foreground shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
 				>
 					<div
 						class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10"

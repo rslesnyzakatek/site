@@ -17,7 +17,7 @@
 		},
 		{
 			icon: Users,
-			title: 'Kulturalna kadra',
+			title: 'Wyspecjalizowana kadra',
 			description:
 				'Nasz zespół to profesjonalni opiekunowie z sercem na dłoni, dla których rodzinna atmosfera i szacunek wobec rezydentów są priorytetem.'
 		},

@@ -10,7 +10,7 @@
 		{
 			icon: Phone,
 			title: 'Telefon',
-			details: ['+48 797 187 786', 'Codziennie 10:00 - 17:00'],
+			details: ['+48 797 187 786', 'Codziennie 8:00 - 16:00'],
 			action: 'tel:+48797187786'
 		},
 		{
@@ -28,7 +28,7 @@
 		{
 			icon: Clock,
 			title: 'Odwiedziny',
-			details: ['Codziennie', '10:00 - 17:00'],
+			details: ['Codziennie', '8:00 - 16:00'],
 			action: 'tel:+48123456789'
 		}
 	];
@@ -111,7 +111,7 @@
 			{#each contactInfo as { icon: Icon, title, details, action }, i (title)}
 				<a
 					href={action}
-					class="rounded-lg border border-border bg-card p-6 text-center text-card-foreground shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+					class="rounded-lg border border-border bg-card p-6 text-center text-card-foreground shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg lg:hidden"
 				>
 					<div
 						class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10"
@@ -131,13 +131,33 @@
 						</p>
 					{/each}
 				</a>
+
+				<div
+					class="hidden rounded-lg border border-border bg-card p-6 text-center text-card-foreground shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg lg:block"
+				>
+					<div
+						class="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10"
+					>
+						<Icon class="h-8 w-8 text-primary" />
+					</div>
+					<h3 class="mb-2 text-lg font-semibold text-card-foreground">
+						{title}
+					</h3>
+					{#each details as detail, idx}
+						<p
+							class={`text-sm ${
+								idx === 0 ? 'font-medium text-foreground' : 'text-muted-foreground'
+							}`}
+						>
+							{detail}
+						</p>
+					{/each}
+				</div>
 			{/each}
 		</div>
 
 		<div class="mx-auto max-w-2xl">
-			<Card
-				clazz="border-primary/20 bg-gradient-to-br from-[hsl(var(--warm-green-subtle))] to-[hsl(var(--warm-green-soft))] p-8"
-			>
+			<Card clazz="border-primary/20 p-8">
 				<h3 class="mb-4 text-center text-2xl font-bold text-primary">Wyślij wiadomość</h3>
 				<p class="mb-6 text-center text-muted-foreground">
 					Wypełnij formularz, a skontaktujemy się z Tobą najszybciej jak to możliwe.

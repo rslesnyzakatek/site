@@ -28,7 +28,7 @@
 		{
 			icon: Clock,
 			title: 'Odwiedziny',
-			details: ['Codziennie', '8:00 - 16:00'],
+			details: ['Codziennie', '10:00 - 17:00'],
 			action: 'tel:+48123456789'
 		}
 	];

@@ -27,6 +27,15 @@
 		content="Nowoczesny dom opieki nad osobami starszymi w Nowogardzie. Profesjonalna opieka, rehabilitacja, komfortowe warunki w otoczeniu przyrody."
 	/>
 	<meta property="og:type" content="website" />
+
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "Rezydencja seniora Leśny Zakątek",
+			"url": "https://rslesnyzakatek.pl"
+		}
+	</script>
 </svelte:head>
 
 <Hero />

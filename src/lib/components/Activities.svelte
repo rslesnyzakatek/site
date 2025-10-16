@@ -98,11 +98,13 @@
 					<img
 						src="/images/rehabilitation-exercise.webp"
 						alt="Rehabilitacja z profesjonalnym fizjoterapeutą"
+						title="Rehabilitacja z profesjonalnym fizjoterapeutą"
 						class="h-64 w-full object-cover"
 					/>
 				</div>
 				<div class="overflow-hidden rounded-lg shadow-lg">
 					<img
+						title="Spacery i nordic walking w grupie"
 						src="/images/seniors-walking.webp"
 						alt="Spacery i nordic walking w grupie"
 						class="h-64 w-full object-cover"
@@ -181,6 +183,7 @@
 			<div class="space-y-6">
 				<div class="overflow-hidden rounded-lg shadow-lg">
 					<img
+						title="Seniorzy w pokoju dziennym - integracja i socjalizacja"
 						src="/images/seniors-socializing.webp"
 						alt="Seniorzy w pokoju dziennym - integracja i socjalizacja"
 						class="h-64 w-full object-cover"
@@ -188,6 +191,7 @@
 				</div>
 				<div class="overflow-hidden rounded-lg shadow-lg">
 					<img
+						title="Seniorzy w pokoju dziennym - integracja i socjalizacja"
 						src="/images/seniors-games.webp"
 						alt="Seniorzy podczas terapii zajęciowej - gry i zabawy"
 						class="h-64 w-full object-cover"

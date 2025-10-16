@@ -8,7 +8,7 @@
 		<div class="mb-8 grid gap-8 text-center md:grid-cols-3 md:text-left">
 			<div class="">
 				<div class="mx-auto h-14 w-fit lg:mx-0">
-					<img src={logo} alt="Leśny Zakątek" class="h-full w-auto" />
+					<img src={logo} alt="Leśny Zakątek" title="Leśny Zakątek" class="h-full w-auto" />
 				</div>
 				<p class="leading-relaxed text-primary-foreground/80">
 					Rezydencja Seniora w sercu przyrody. <br /> Profesjonalna opieka i ciepła atmosfera dla Twoich
@@ -60,7 +60,12 @@
 			class="flex flex-col items-center justify-center gap-4 text-primary-foreground/70 md:flex-row"
 		>
 			<p class="text-base">Realizacja <br /> witryny</p>
-			<img src="/adcare.webp" alt="" class="h-14" />
+			<img
+				src="/adcare.webp"
+				alt="AdCare Bartosz Kuliński"
+				title="AdCare Bartosz Kuliński"
+				class="h-14"
+			/>
 		</div>
 	</div>
 </footer>

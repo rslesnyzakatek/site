@@ -51,11 +51,13 @@
 			<div class="grid grid-cols-2 gap-4">
 				<img
 					src="/images/kitchen-chefs.webp"
+					title="Profesjonalni kucharze przygotowujący posiłki w kuchni"
 					alt="Profesjonalni kucharze przygotowujący posiłki w kuchni"
 					class="h-64 w-full rounded-lg object-cover shadow-lg"
 				/>
 				<img
 					src="/images/senior-food-prep.webp"
+					title="Przygotowywanie zdrowych posiłków"
 					alt="Przygotowywanie zdrowych posiłków"
 					class="h-64 w-full rounded-lg object-cover shadow-lg"
 				/>
@@ -66,6 +68,7 @@
 			<div class="order-2 md:order-1">
 				<img
 					src="/images/dining-room.webp"
+					title="Przestronna jadalnia ośrodka"
 					alt="Przestronna jadalnia ośrodka"
 					class="h-80 w-full rounded-lg object-cover shadow-lg"
 				/>

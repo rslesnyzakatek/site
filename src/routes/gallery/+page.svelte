@@ -48,6 +48,10 @@
 
 <svelte:head>
 	<title>Rezydencja Seniora Leśny Zakątek | Dom Opieki w Nowogardzie - Galeria</title>
+	<meta
+		name="description"
+		content="Zobacz naszą galerię zdjęć przedstawiającą komfortowe pokoje, nowoczesne wyposażenie i piękne otoczenie Rezydencji Seniora Leśny Zakątek w Nowogardzie."
+	/>
 </svelte:head>
 
 <div class="min-h-screen">
@@ -77,6 +81,7 @@
 						<img
 							src={image.src}
 							alt={image.alt}
+							title={image.alt}
 							class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
 						/>
 					</div>
@@ -99,6 +104,7 @@
 				<img
 					src={imgSrc}
 					alt="Powiększony obrazek"
+					title="Powiększony obrazek"
 					class="modal-image max-h-[70vh] max-w-[70vw] object-contain"
 				/>
 			</div>

@@ -52,7 +52,7 @@
 	<div class="container mx-auto max-w-7xl px-4">
 		<div class="flex h-20 items-center justify-between">
 			<a class="h-14" href="/">
-				<img src={logo} alt="Leśny Zakątek" class="h-full w-auto" />
+				<img src={logo} alt="Leśny Zakątek" title="Leśny Zakątek" class="h-full w-auto" />
 			</a>
 			<button on:click={toggleMenu} aria-label="Otwórz menu" class="lg:hidden">
 				<MenuIcon class="h-6 w-6 cursor-pointer text-white hover:text-green-200 lg:hidden" />

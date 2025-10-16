@@ -72,6 +72,7 @@
 				<img
 					src="/images/caregiver-support.webp"
 					alt="Profesjonalna opieka nad seniorem"
+					title="Profesjonalna opieka nad seniorem"
 					class="h-full w-full object-cover"
 				/>
 			</div>

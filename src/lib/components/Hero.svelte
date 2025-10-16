@@ -36,6 +36,7 @@
 			<img
 				src="/images/hero-small.webp"
 				alt="Rezydencja Seniora Leśny Zakątek"
+				title="Rezydencja Seniora Leśny Zakątek"
 				class="h-full w-full object-fill md:object-cover"
 			/>
 		</picture>

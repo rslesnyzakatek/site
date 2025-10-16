@@ -55,6 +55,7 @@
 						<img
 							src={image}
 							alt={title}
+							{title}
 							class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
 						/>
 					</div>
@@ -76,6 +77,7 @@
 				<img
 					src="/images/team-caregivers.webp"
 					alt="Profesjonalny zespół opiekunów"
+					title="Profesjonalny zespół opiekunów"
 					class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
 				/>
 			</div>

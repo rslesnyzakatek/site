@@ -49,6 +49,7 @@
 	<img
 		src={images[img_nr]?.src}
 		alt={img_alt}
+		title={img_alt}
 		class="h-full w-full object-cover transition-all duration-300 group-hover:scale-110"
 	/>
 	<div
@@ -79,6 +80,7 @@
 			<img
 				src={images[currentIndex]?.src}
 				alt={images[currentIndex]?.alt}
+				title={images[currentIndex]?.alt}
 				class="max-h-[80vh] max-w-[80vw] object-contain"
 			/>
 
